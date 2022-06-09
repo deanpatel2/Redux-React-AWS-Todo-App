@@ -66,7 +66,7 @@ export const tasksSlice = createSlice({
         .addCase(fetchTasks.fulfilled, (state, action) => {
             state.status = Status.SUCCEEDED
             const currentIds = state.tasks.map(task => task.id);
-            action.payload.reverse();
+            action.payload.sort((a, b) => (a.task_id > b.task_id) ? 1 : -1)
             action.payload.forEach((element, index) => {
             if (!currentIds.includes(element.task_id)) {
                 state.tasks.push({
