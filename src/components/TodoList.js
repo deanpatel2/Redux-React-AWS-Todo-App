@@ -33,9 +33,9 @@ const TodoList = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-  if (todos.every(task => task.completed === true)) {
+  if ((todos.length !== 0) && todos.every(task => task.completed === true)) {
     setAlert('allDone');
-  } else if (todos.every(task => task.completed === false)) {
+  } else if ((todos.length !== 0) && todos.every(task => task.completed === false)) {
     setAlert('noneDone');
   } else {
     setAlert('');
@@ -49,13 +49,11 @@ const TodoList = () => {
   }, [taskStatus, dispatch])
 
   const handleToggle = (id) => {
-    console.log("Old", todos)
     dispatch(
 			toggleTask({
 				id: id
 			})
 		)
-    console.log("New", todos)
   }
 
 	const removeTask = (id) => {
