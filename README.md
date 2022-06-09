@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Summary
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This is a small todo app built with React and Redux as a workshop project. To enhance it, the data for the app is coming from AWS
+services such as DynamoDB, Lambda, and API Gateway.
 
 ## Available Scripts
 
