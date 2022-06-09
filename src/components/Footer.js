@@ -53,7 +53,7 @@ const Footer = () => {
                 <Button
                     onClick={handleSave}
                     size="small"
-                    variant="outlined"
+                    variant="contained"
                     >
                     Save
                 </Button>
