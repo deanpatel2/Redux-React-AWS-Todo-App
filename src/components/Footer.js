@@ -6,7 +6,9 @@ import Alert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
+// import Fotmob from 'fotmob'
 const axios = require('axios').default;
+
 
 const Footer = () => {
     const tasksRemaining = useSelector(selectTodosRemaining)
@@ -23,6 +25,9 @@ const Footer = () => {
             console.error(error)
         }
     }
+
+    // const fotmob = new Fotmob();
+    // const cityVsvilla = fotmob.getMatchDetails('3610308')
 
     return (
         <>
